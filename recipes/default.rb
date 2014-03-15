@@ -26,8 +26,6 @@ silverstripe_db_connection_info = {
 
 include_recipe "apt"
 include_recipe "openssl"
-include_recipe "mysql::ruby"
-include_recipe "mysql::server"
 include_recipe "php::package"
 include_recipe "php::module_gd"
 include_recipe "php::module_mysql"
@@ -36,6 +34,7 @@ include_recipe "apache2::mod_php5"
 include_recipe "apache2::mod_rewrite"
 include_recipe "apache2::mod_headers"
 include_recipe "database::mysql"
+include_recipe "mysql::server"
 
 # Add vagrant user to www-data
 group "www-data" do

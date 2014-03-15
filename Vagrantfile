@@ -30,7 +30,12 @@ Vagrant.configure('2') do |config|
     exit
   end
 
-  config.vm.box = "precise32"
+  config.vm.box = "precise64"
+  
+  # The url from where the 'config.vm.box' box will be fetched if it
+  # doesn't already exist on the user's system.
+  config.vm.box_url = "https://vagrantcloud.com/hashicorp/precise64/version/2/provider/virtualbox.box"
+  
   # config.vm.share_folder("v-root", "/vagrant", ".", :extra => 'dmode=775,fmode=775')
 
   config.vm.provider :virtualbox do |vb|
