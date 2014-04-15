@@ -35,6 +35,7 @@ include_recipe "apache2::mod_rewrite"
 include_recipe "apache2::mod_headers"
 include_recipe "database::mysql"
 include_recipe "mysql::server"
+include_recipe "postfix::default"
 
 # Add vagrant user to www-data
 group "www-data" do
